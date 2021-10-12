@@ -1,14 +1,18 @@
 // 1
 for (i = 1; i <= 7; i++){
   console.log(i);
-}
+};
+
+// OR
+// for (i = 1; i < 8; i++){
+//   console.log(i);
 
 console.log("=====");
 
 // 2
-for (i = 5; i <= 25; i++){
+for (i = 5; i <= 25; i += 4){
   console.log(i);
-}
+};
 
 // 3a
 const wizards = [
@@ -21,8 +25,8 @@ console.log(wizards);
 console.log("=====");
 
 // 3b
-for (char of wizards){
-console.log(char);
+for (names of wizards){
+console.log(names);
 };
 
 console.log("=====");
@@ -34,10 +38,20 @@ console.log(harryPotterMovies);
 console.log("=====");
 
 // 4b 
-while (harryPotterMovies <= 7){
-console.log(harryPotterMovies);
-harryPotterMovies++;
+while (harryPotterMovies < 8){
+  harryPotterMovies++;
 };
+
+// OR
+// while (harryPotterMovies <= 7){
+// harryPotterMovies++;
+// }
+// OR
+// while(true){
+//   harryPotterMovies++;
+//   if (harryPotterMovies === 8){
+//     break;
+//   }
 
 //4c
 console.log(harryPotterMovies);
@@ -53,9 +67,9 @@ const hogwartsHouses = [
 console.log(hogwartsHouses);
 
 //5b
-for (char of hogwartsHouses){
-  for (houses of char) {
-    console.log(houses);
+for (houses of hogwartsHouses){
+  for (names of houses) {
+    console.log(names);
   }
 };
 
@@ -74,3 +88,27 @@ while (quote !== sentence){
   console.log(quote.join(" "));
   break;
 };
+
+/*
+OR
+// USING A FOR OF LOOP
+let sentence = "";
+for (word of quote){
+  // console.log(word);
+  sentence += `${word} `;
+  console.log(sentence);
+}
+sentence = sentence.trim();
+console.log(sentence);
+  
+// USING A FOR LOOP
+let sentence = "";
+for (i = 0; i < quote.length; i++){
+  console.log (quote[i]);
+  sentence += `${quote[i]} `;
+  console.log(sentence);
+}
+console.log(sentence.trim());
+
+*/
+
